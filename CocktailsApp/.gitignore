@@ -1,8 +1,8 @@
 # Ignore Visual Studio temporary files, build results, and
 # build logs.
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+bin/
+obj/
+log/
 .vscode/
 
 # Ignore Visual Studio Code workspace settings
