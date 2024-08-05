@@ -1,0 +1,89 @@
+# Ignore Visual Studio temporary files, build results, and
+# build logs.
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vscode/
+
+# Ignore Visual Studio Code workspace settings
+.vscode/settings.json
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Ignore the local NuGet packages folder
+packages/
+*.nupkg
+*.snupkg
+
+# Ignore NuGet Package Folders
+**/packages/*
+
+# Project-specific ignore patterns
+AppData/
+*.appx
+*.appxbundle
+*.appxupload
+
+# Ignore build results
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# .NET MAUI specific patterns
+**/*.db
+**/config.json
+**/secrets.json
+**/appsettings.json
+
+# JetBrains Rider
+.idea/
+
+# Rider's index
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.local/
+.idea/sqlDialects.xml
+.idea/sqlResolutionScopes.xml
+.idea/projectModels/
+.idea/dataSources.xml
+.idea/sonarlint/
+.idea/deploymentTarget.xml
+
+# Rider's run configurations
+.idea/runConfigurations/
+
+# Node.js
+node_modules/
+
+# Mobile specific
+*.ap_
+*.ipa
+.DS_Store
+
+# Windows specific
+.vs/
