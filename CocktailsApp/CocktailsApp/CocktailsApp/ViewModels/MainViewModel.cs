@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -28,6 +29,11 @@ namespace CocktailsApp.ViewModels
         private async void NavigateSearchCocktailsPage()
         {
             await Shell.Current.GoToAsync(nameof(SearchCocktailsPage));
+
+            //var serializedObject = JsonSerializer.Serialize(_cocktailsSdk); // or JsonConvert.SerializeObject(yourObject)
+
+            // Navigate and pass the serialized string as a query parameter
+            //await Shell.Current.GoToAsync($"{nameof(SearchCocktailsPage)}?SerializedObject={Uri.EscapeDataString(serializedObject)}");
         }
 
         public void StartCocktailsSdk()
