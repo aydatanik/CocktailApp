@@ -7,9 +7,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Jars\MyHttpSdk-release.aar" />
-    <None Remove="Jars\volley-1.2.1.aar" />
   </ItemGroup>
   <ItemGroup>
   <EmbeddedResource Include="Transforms\Metadata.xml" />
+</ItemGroup>
+<ItemGroup>
+  <AndroidLibrary Include="Jars/MyHttpSdk-release.aar" Bind="false" />
+  <AndroidLibrary Include="Jars/volley-1.2.1.aarr" Bind="false" />
 </ItemGroup>
 </Project>
