@@ -16,36 +16,39 @@ namespace CocktailsApp.ViewModels
     {
         private readonly ICocktailsSdk _cocktailsSdk;
         public ICommand NavigateSearchCocktailsPageCommand { get; set; }
+        public ICommand NavigateGetRandomCocktailsPageCommand { get; set; }
+        public ICommand NavigateSearchIngredientsPageCommand { get; set; }
 
-       // ICocktailsSdk sdk = DependencyService.Get<ICocktailsSdk>();
-
-        public MainViewModel(ICocktailsSdk cocktailsSdk)
+        public MainViewModel(ICocktailsSdk cocktailsSdk, IServiceProvider provider)
         {
             NavigateSearchCocktailsPageCommand = new Command(NavigateSearchCocktailsPage);
+            NavigateGetRandomCocktailsPageCommand = new Command(NavigateGetRandomCocktailsPage);
+            NavigateSearchIngredientsPageCommand = new Command(NavigateSearchIngredientsPage);
             _cocktailsSdk = cocktailsSdk;
+           // var sdk = provider.GetService<ICocktailsSdk>();
+           // _cocktailsSdk = sdk!;
             StartCocktailsSdk();
-            SearchCocktailsByName();
-        }
-        private async void NavigateSearchCocktailsPage()
-        {
-            await Shell.Current.GoToAsync(nameof(SearchCocktailsPage));
-
-            //var serializedObject = JsonSerializer.Serialize(_cocktailsSdk); // or JsonConvert.SerializeObject(yourObject)
-
-            // Navigate and pass the serialized string as a query parameter
-            //await Shell.Current.GoToAsync($"{nameof(SearchCocktailsPage)}?SerializedObject={Uri.EscapeDataString(serializedObject)}");
         }
 
         public void StartCocktailsSdk()
         {
             _cocktailsSdk.StartSdk();
         }
-
-        public void SearchCocktailsByName()
+        private async void NavigateSearchCocktailsPage()
         {
-            ISearchCocktailsCallback callback = new SearchCocktailsCallback();
-            _cocktailsSdk.SearchCocktailByName("mojito", callback);
-
+            await Shell.Current.GoToAsync(nameof(SearchCocktailsPage));
         }
+
+        private async void NavigateGetRandomCocktailsPage()
+        {
+            await Shell.Current.GoToAsync(nameof(GetRandomCoctailPage));
+        }
+
+        private async void NavigateSearchIngredientsPage()
+        {
+            await Shell.Current.GoToAsync(nameof(SearchIngredientsPage));
+        }
+
+      
     }
 }

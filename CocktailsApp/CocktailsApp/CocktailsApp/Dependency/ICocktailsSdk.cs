@@ -1,4 +1,5 @@
 ﻿using CocktailsApp.Callbacks;
+using CocktailsApp.Listener;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,13 @@ namespace CocktailsApp.Dependency
 {
     public interface ICocktailsSdk
     {
-
         void StartSdk();
 
         void SearchCocktailByName(String cocktailName, ISearchCocktailsCallback callback);
-         
-        // another two method 
 
-
+        void GetRandomCocktail(IGetCocktailCallback callback);
+       
+        void SearchIngredientByName(IingredientListener callback, String  ingredientName);
+       
     }
 }

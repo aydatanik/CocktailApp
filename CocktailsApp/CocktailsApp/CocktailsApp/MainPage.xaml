@@ -29,11 +29,13 @@
                 HorizontalOptions="Fill" />
             <Button
                 Text="Get Random Cocktails" 
+                Command="{Binding NavigateGetRandomCocktailsPageCommand}"
                 BackgroundColor="OrangeRed"
                 SemanticProperties.Hint="Counts the number of times you click"
                 HorizontalOptions="Fill" />
             <Button
                 Text="Search Ingredients by name " 
+                Command="{Binding NavigateSearchIngredientsPageCommand}"
                 BackgroundColor="OrangeRed"
                 SemanticProperties.Hint="Counts the number of times you click"
                 HorizontalOptions="Fill" />

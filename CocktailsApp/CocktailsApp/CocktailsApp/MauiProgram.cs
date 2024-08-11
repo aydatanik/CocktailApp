@@ -24,10 +24,14 @@ namespace CocktailsApp
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
 
+            builder.Services.AddSingleton<SearchCocktailsPage>();
+            builder.Services.AddSingleton<SearchCocktailsViewModel>();
 
-            //will be create and destroy
-            builder.Services.AddTransient<SearchCocktailsPage>();
-            builder.Services.AddTransient <SearchCocktailsViewModel>();
+            builder.Services.AddSingleton<GetRandomCoctailPage>();
+            builder.Services.AddSingleton<GetRandomCocktailViewModel>();
+
+            builder.Services.AddSingleton<SearchIngredientsPage>();
+            builder.Services.AddSingleton<SearchIngredientsViewModel>();
 
 
 #if DEBUG

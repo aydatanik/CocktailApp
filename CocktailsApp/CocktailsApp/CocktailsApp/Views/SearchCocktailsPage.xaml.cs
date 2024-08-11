@@ -1,3 +1,4 @@
+using CocktailsApp.Dependency;
 using CocktailsApp.ViewModels;
 
 namespace CocktailsApp.Views;
@@ -8,5 +9,6 @@ public partial class SearchCocktailsPage : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
+		
 	}
 }

@@ -8,7 +8,7 @@ namespace CocktailsApp.Callbacks
 {
     public interface ISearchCocktailsCallback 
     {
-        public void OnSearchCocktailsResult();
+        public void OnSearchCocktailsResult(List<Model.Cocktail> cocktails);
         public void OnSearchCocktailsFailed();
     }
 }
