@@ -17,7 +17,7 @@ namespace CocktailsApp.Platforms.Dependecy
 {
     public class CocktailsSdk : ICocktailsSdk
     {
-        public event EventHandler<SearchIngredientsEventArgs> IngredientSearchCompleted;
+        //public event EventHandler<SearchIngredientsEventArgs> IngredientSearchCompleted;
         public void SearchCocktailByName(string cocktailName, ISearchCocktailsCallback callback)
         {
             try
@@ -50,17 +50,12 @@ namespace CocktailsApp.Platforms.Dependecy
 
         public void SearchIngredientByName(IingredientListener ilistener, string ingredientName)
         {
-            //SearchIngredientService searchIngredientService = new SearchIngredientService();
-            //searchIngredientService.IngredientsFounded += SearchIngredientService_IngredientsFounded;
-            //var listener = new SearchIngredientsEventArgs();
-            //CocktailManager.Instance!.SearchIngredientByName(listener, ingredientName);
             IngredientSearchListener listener = new IngredientSearchListener();
             listener.Listener = ilistener;
-           // IIngredientListener ingredientListener = new IIngredientListener();
             CocktailManager.Instance!.SearchIngredientByName(listener, ingredientName);
         }
 
-        private void SearchIngredientService_IngredientsFounded(object? sender, IngredientEventArgs e)
+       /* private void SearchIngredientService_IngredientsFounded(object? sender, IngredientEventArgs e)
         {
             if(e.Ingredients != null)
             {
@@ -68,7 +63,7 @@ namespace CocktailsApp.Platforms.Dependecy
             }
            
         }
-
+       */
         public void StartSdk()
         {
             try

@@ -35,7 +35,7 @@ namespace CocktailsApp.Model
 
         public override string ToString()
         {
-            return $"IdDrink: {IdDrink} StrDrink: {StrDrink} StrAlcoholic: {StrAlcoholic} StrGlass: {StrGlass} \n  StrCategory: {StrCategory} DateModified: {DateModified}";
+            return $"IdDrink: {IdDrink} StrDrink: {StrDrink} StrAlcoholic: {StrAlcoholic} StrGlass: {StrGlass} StrCategory: {StrCategory} DateModified: {DateModified}";
         }
 
     }

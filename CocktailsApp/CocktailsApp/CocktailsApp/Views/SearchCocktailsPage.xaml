@@ -36,18 +36,28 @@
                 BackgroundColor="OrangeRed"
                 Command="{Binding SearchCocktailsByNameCommand}"
                 Margin="5,5,5,5"/>
-        <ListView  Grid.Row="3" Grid.Column="0" BackgroundColor="GhostWhite" ItemsSource="{Binding CocktailList}" Margin="0,20,0,10">
+        <ListView  Grid.Row="3" Grid.Column="0"  ItemsSource="{Binding CocktailList}" Margin="0,20,0,10">
             <ListView.ItemTemplate>
                 <DataTemplate >
-                    <ViewCell>
-                        <Grid  BackgroundColor="AliceBlue">
-                            <Label Text="{Binding StrDrink}" 
-                                   VerticalOptions="Start"
-                                   HorizontalOptions="Start" 
-                                   FontSize="Large"
-                                   TextColor="Black"/>
+                  
+                        <Frame CornerRadius="15"        
+                        BorderColor="LightGray"
+                        HasShadow="True"
+                        Padding="10"
+                        Margin="10"
+                        BackgroundColor="GhostWhite">
+                        <Grid>
+                            <Label Text="{Binding StrDrink}"
+                           VerticalOptions="StartAndExpand"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Start"
+                           FontSize="Medium"
+                           TextColor="Black"
+                           LineBreakMode="WordWrap" />
                         </Grid>
-                    </ViewCell>
+
+                    </Frame>
+                      
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -43,7 +43,6 @@ namespace CocktailsApp.Platforms.Android.Sdk
                     cocktail.DateModified = item.DateModified;
                     //cocktail.Ingredients = (Dictionary<string, string>?)item.Ingredients;
                     //cocktail.Measures = (Dictionary<string, string>?)item.Measures;
-
                     cocktails.Add(cocktail);
                 }
             }

@@ -1,6 +1,7 @@
 ﻿using CocktailsApp.Dependency;
 using CocktailsApp.ViewModels;
 using CocktailsApp.Views;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 
@@ -13,6 +14,7 @@ namespace CocktailsApp
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

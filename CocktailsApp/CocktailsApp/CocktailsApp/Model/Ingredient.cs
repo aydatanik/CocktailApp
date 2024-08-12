@@ -17,7 +17,7 @@ namespace CocktailsApp.Model
 
         public override string ToString()
         {
-            return $"IdIngredient: {IdIngredient} StrIngredient: {StrIngredient} StrDescription: {StrDescription} StrType: {StrType} \n  StrAlcohol: {StrAlcohol} StrABV: {StrABV}";
+            return $"IdIngredient: {IdIngredient} StrIngredient: {StrIngredient} StrDescription: {StrDescription} StrType: {StrType}  StrAlcohol: {StrAlcohol} StrABV: {StrABV}";
         }
     }
 }

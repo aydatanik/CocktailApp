@@ -48,7 +48,5 @@ namespace CocktailsApp.ViewModels
         {
             await Shell.Current.GoToAsync(nameof(SearchIngredientsPage));
         }
-
-      
     }
 }
